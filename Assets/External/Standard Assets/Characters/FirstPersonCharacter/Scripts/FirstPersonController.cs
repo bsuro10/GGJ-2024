@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        [SerializeField] private bool isMouseMovementLocked;
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -32,6 +33,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        private float m_OriginalWalkSpeed;
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -50,6 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            m_OriginalWalkSpeed = m_WalkSpeed;
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -63,6 +66,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
             resetFootstepInterval = m_StepInterval + 0.3f;
         }
 
+        public void SetWalkSpeedToOriginal()
+        {
+            m_WalkSpeed = m_OriginalWalkSpeed;
+        }
+
+        public void SetWalkSpeed(float speed)
+        {
+            m_WalkSpeed = speed;
+        }
+
+        public void SetMouseMovementLock(bool value)
+        {
+            isMouseMovementLocked = value;
+        }
 
         // Update is called once per frame
         private void Update()
@@ -250,7 +267,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            if (!isMouseMovementLocked)
+                m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
 

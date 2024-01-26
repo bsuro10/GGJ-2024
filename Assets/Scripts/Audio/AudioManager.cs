@@ -61,6 +61,11 @@ public class AudioManager : MonoBehaviour
         sound.source.PlayOneShot(sound.GetClip());
     }
 
+    public void PlayVoiceline(string name)
+    {
+        PlayVoiceline(name, Vector3.zero);
+    }
+
     public void PlayVoiceline(string name, Vector3 position = default)
     {
         AudioClip clip = voicelinesDict[name].GetClip();
