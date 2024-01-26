@@ -8,6 +8,7 @@ public class Shelf : Interactable
     [SerializeField] private GameObject bookItemHidden;
     [SerializeField] private string voiceline;
     [SerializeField] private float delay;
+    [SerializeField] private GameObject window;
 
     private Item currentItem;
     private bool canPickBookBack = false;
@@ -54,6 +55,7 @@ public class Shelf : Interactable
         yield return new WaitForSeconds(delay);
         AudioManager.Instance.PlayVoiceline(voiceline);
         this.canPickBookBack = true;
+        this.window.SetActive(true);
     }
 
 }
