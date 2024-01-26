@@ -451,6 +451,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcd70e2b9bcdd6d4fb931ae5215ebbd6, type: 3}
+--- !u!1 &831177950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5151808644257293208, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+  m_PrefabInstance: {fileID: 7648615126968717458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &831177957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831177950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caecfd2565714a341813ccea6c3437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bookItem: {fileID: 11400000, guid: 4d75ce00493023a41818346676138eaa, type: 2}
 --- !u!1001 &1019474334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,7 +535,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
   m_PrefabInstance: {fileID: 542437433}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2144356725}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c52d8f2018ecee48b219c0a7ddc17a2, type: 3}
@@ -587,6 +605,92 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!1 &1828584798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3709537642359783280, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+  m_PrefabInstance: {fileID: 7648615126968717458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1828584804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828584798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0459ac7896e5047a5d3d72ccb818db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 581896554}
+        m_TargetAssemblyTypeName: UnityStandardAssets.Characters.FirstPerson.FirstPersonController,
+          Assembly-CSharp
+        m_MethodName: SetMouseMovementLock
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 581896554}
+        m_TargetAssemblyTypeName: UnityStandardAssets.Characters.FirstPerson.FirstPersonController,
+          Assembly-CSharp
+        m_MethodName: SetWalkSpeedToOriginal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1828584805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828584798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a169244afc0d324d9036aeaca80e04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1340937540}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayVoiceline
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1340937540}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayVoiceline
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  delayInSeconds: 10
 --- !u!114 &2077096038 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6899127599400462786, guid: bcd70e2b9bcdd6d4fb931ae5215ebbd6, type: 3}
@@ -598,6 +702,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a3116b945698434082e237415e4b494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2144356725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9074512388841676056, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+  m_PrefabInstance: {fileID: 542437433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1983360733316174429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -716,6 +825,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 581896554}
@@ -726,15 +847,45 @@ PrefabInstance:
     - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2077096038}
+      objectReference: {fileID: 2144356725}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMouseMovementLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetMouseMovementLock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityStandardAssets.Characters.FirstPerson.FirstPersonController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7553055234163316865, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2077096038}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 800374182571227690, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3709537642359783280, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1828584805}
+    - targetCorrespondingSourceObject: {fileID: 3709537642359783280, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1828584804}
+    - targetCorrespondingSourceObject: {fileID: 5151808644257293208, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 831177957}
   m_SourcePrefab: {fileID: 100100000, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

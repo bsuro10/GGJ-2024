@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class Collectible : Interactable
 {
-    [SerializeField] private Item item;
+    [SerializeField] public Item item;
     [SerializeField] private int amount = 1;
 
     public override void Interact()
