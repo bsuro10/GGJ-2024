@@ -2554,6 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51026dd627b72040b32f456adda3752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  officeToHallwayDoor: {fileID: 1187358885357263643}
 --- !u!1 &5266802100802284777
 GameObject:
   m_ObjectHideFlags: 0
@@ -3869,13 +3870,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1518230750313582025}
   - {fileID: 4549979814009634671}
   - {fileID: 6065622822831754823}
   - {fileID: 2544668164058285}
   - {fileID: 4085290996626171250}
   - {fileID: 1102879257341653872}
   - {fileID: 1341952526570048049}
-  - {fileID: 1518230750313582025}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7608148039643724863
@@ -4753,7 +4754,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 758359706291685156, guid: 1f655a392db7db4408bbcf0e14baf5d1, type: 3}
       propertyPath: m_Name
-      value: Door
+      value: DoorOfficeToHallway
       objectReference: {fileID: 0}
     - target: {fileID: 3510698687268188846, guid: 1f655a392db7db4408bbcf0e14baf5d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4800,6 +4801,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f655a392db7db4408bbcf0e14baf5d1, type: 3}
+--- !u!114 &1187358885357263643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3878460833517757564, guid: 1f655a392db7db4408bbcf0e14baf5d1, type: 3}
+  m_PrefabInstance: {fileID: 2713795949981400935}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ddb4e56a7b08f4e8aac984511fe0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1518230750313582025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3510698687268188846, guid: 1f655a392db7db4408bbcf0e14baf5d1, type: 3}
