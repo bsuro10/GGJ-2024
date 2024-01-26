@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 8200000}
   - component: {fileID: 8046648434308139889}
+  - component: {fileID: 1456685466332132357}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Untagged
@@ -183,10 +184,10 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 4.45
   m_FootstepSounds:
-  - {fileID: 8300000, guid: 4078b8351ee5883498d9481b8ed8dd4d, type: 3}
-  - {fileID: 8300000, guid: bbdecd1fd9f26f7488f27825d45bbc39, type: 3}
-  - {fileID: 8300000, guid: bc25d3e14431c4a499716ae679999088, type: 3}
-  - {fileID: 8300000, guid: 9d946456df2912e4fb7f2d66ea242a68, type: 3}
+  - {fileID: 8300000, guid: 430453977c97aa44090236a968dda88c, type: 3}
+  - {fileID: 8300000, guid: f14b67c275e4bb14fa06d238f09b6760, type: 3}
+  - {fileID: 8300000, guid: 76f26462456d960488e42e27bae8d42c, type: 3}
+  - {fileID: 8300000, guid: e35d0365193c6724a9a62e9cb983412e, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   instantVelocity: {x: 0, y: 0, z: 0}
@@ -326,16 +327,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalFootsteps:
-  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
-  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
-  - {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
-  - {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+  - {fileID: 8300000, guid: 430453977c97aa44090236a968dda88c, type: 3}
+  - {fileID: 8300000, guid: f14b67c275e4bb14fa06d238f09b6760, type: 3}
+  - {fileID: 8300000, guid: 76f26462456d960488e42e27bae8d42c, type: 3}
+  - {fileID: 8300000, guid: e35d0365193c6724a9a62e9cb983412e, type: 3}
   squeekyBoots:
   - {fileID: 8300000, guid: 4078b8351ee5883498d9481b8ed8dd4d, type: 3}
   - {fileID: 8300000, guid: bbdecd1fd9f26f7488f27825d45bbc39, type: 3}
   - {fileID: 8300000, guid: bc25d3e14431c4a499716ae679999088, type: 3}
   - {fileID: 8300000, guid: 9d946456df2912e4fb7f2d66ea242a68, type: 3}
   controller: {fileID: 11400000}
+--- !u!114 &1456685466332132357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667ae30b00b10b14db9efcc69502ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 5
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  cam: {fileID: 2000000}
+  interactPrompt: {fileID: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
