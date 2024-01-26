@@ -22,6 +22,7 @@ public class FootstepSoundSwitcher : MonoBehaviour
     public void StopSqueeky()
     {
         controller.m_FootstepSounds = normalFootsteps;
+        controller.normalFootsteps = 0;
         squeeky = false;
     }
 
@@ -35,6 +36,7 @@ public class FootstepSoundSwitcher : MonoBehaviour
         else if (squeekySteps == 4 && squeekSequence == 2)
         {
             AudioManager.Instance.PlayVoiceline("admits_boots_sounds");
+            StopSqueeky();
         }
     }
 }

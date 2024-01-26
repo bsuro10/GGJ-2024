@@ -34,6 +34,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
         public FootstepSoundSwitcher footstepSoundSwitcher;
+        public int normalFootsteps = 0;
 
         private float m_OriginalWalkSpeed;
         private Camera m_Camera;
@@ -216,6 +217,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (footstepSoundSwitcher.squeeky)
             {
                 footstepSoundSwitcher.UpdateSqueekySteps();
+            }
+            else
+            {
+                normalFootsteps += 1;
+            }
+
+            if(!footstepSoundSwitcher.squeeky 
+                && footstepSoundSwitcher.squeekSequence == 1 
+                && normalFootsteps == 4)
+            {
+                footstepSoundSwitcher.StartSqueeky();
             }
         }
 
