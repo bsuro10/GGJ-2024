@@ -44,6 +44,7 @@ public class AudioManager : MonoBehaviour
         }
 
         voicelineAudioSource = gameObject.AddComponent<AudioSource>();
+        voicelineAudioSource.outputAudioMixerGroup = dialogueGroup;
         voicelineAudioSource.clip = voicelines[0].GetClip();
 
         foreach(Voiceline voiceline in voicelines)
