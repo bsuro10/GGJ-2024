@@ -63,15 +63,26 @@ public class AudioManager : MonoBehaviour
 
     public void PlayVoiceline(string name)
     {
-        PlayVoiceline(name, Vector3.zero);
+        PlayVoiceline(name, 0 ,Vector3.zero);
     }
 
-    public void PlayVoiceline(string name, Vector3 position = default)
+
+    public void PlayVoiceline(string name, float delay = 0f, Vector3 position = default)
     {
+        StartCoroutine(PlayVoicelineCR(name, delay, position));
+    }
+
+    IEnumerator PlayVoicelineCR(string name, float delay = 0f, Vector3 position = default)
+    {
+        if (delay > 0f)
+        {
+            yield return new WaitForSeconds(delay);
+        }
+
         AudioClip clip = voicelinesDict[name].GetClip();
         AudioSource current = voicelineAudioSource[currentVoicelineSource];
         AudioSource next = voicelineAudioSource[currentVoicelineSource ^ 1];
-        if (current.isPlaying) 
+        if (current.isPlaying)
         {
             //Fade out current quickly so no clicks
             StartCoroutine(FadeOut(current));
@@ -97,6 +108,11 @@ public class AudioManager : MonoBehaviour
 
         source.Stop();
         source.volume = 1.0f;
+    }
+
+    IEnumerator Wait(float delay)
+    {
+        yield return new WaitForSeconds(delay);
     }
 
     [System.Serializable]
