@@ -12,6 +12,11 @@ public class Collectible : Interactable
         PickUp();
     }
 
+    public override string GetText()
+    {
+        return "Press 'E' to pick up " + transform.name;
+    }
+
     private void PickUp()
     {
         Debug.Log("Picking up " + amount + " " + item.name);

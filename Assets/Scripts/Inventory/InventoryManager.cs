@@ -78,4 +78,6 @@ public class InventoryManager : MonoBehaviour
             onItemChangedCallback.Invoke();
     }
 
+    public bool isExist(Item item) => items.Exists((InventoryItem inventoryItem) => inventoryItem.item.name.Equals(item.name));
+
 }
