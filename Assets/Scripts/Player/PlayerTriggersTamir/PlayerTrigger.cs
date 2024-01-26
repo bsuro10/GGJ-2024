@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class PlayerTrigger : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             OnPlayerTriggerEnter();
         }

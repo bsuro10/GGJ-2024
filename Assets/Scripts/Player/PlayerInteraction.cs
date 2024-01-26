@@ -7,11 +7,11 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float maxDistance = 5f;
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private Camera cam;
-    [SerializeField] private GameObject interactPrompt;
+    [SerializeField] private InteractPrompt interactPrompt;
 
     private void Start()
     {
-        interactPrompt.SetActive(false);
+        interactPrompt.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -23,7 +23,8 @@ public class PlayerInteraction : MonoBehaviour
             Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null)
             {
-                interactPrompt.SetActive(true);
+                interactPrompt.gameObject.SetActive(true);
+                interactPrompt.text.text = interactable.GetText();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     interactable.Interact();
@@ -31,12 +32,12 @@ public class PlayerInteraction : MonoBehaviour
             }
             else
             {
-                interactPrompt.SetActive(false);
+                interactPrompt.gameObject.SetActive(false);
             }
         }
         else
         {
-            interactPrompt.SetActive(false);
+            interactPrompt.gameObject.SetActive(false);
         }
     }
 }

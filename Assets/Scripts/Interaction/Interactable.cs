@@ -7,4 +7,8 @@ public class Interactable : MonoBehaviour
         Debug.Log("Interacting with: " + transform.name);
     }
 
+    public virtual string GetText()
+    {
+        return "Press 'E' to use " + transform.name;
+    }
 }
