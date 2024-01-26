@@ -3,21 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] sounds;
 
-    private Dictionary<string, Sound> soundsDict = new Dictionary<string, Sound>();
+    public Sound[] sounds;
+    private Dictionary<string, Sound> soundsDict = new();
+
+    public Voiceline[] voicelines;
+    private Dictionary<string, Voiceline> voicelinesDict = new();
+    private AudioSource voicelineAudioSource;
 
     public AudioMixerGroup masterGroup;
     public AudioMixerGroup musicGroup;
     public AudioMixerGroup sfxGroup;
-
-    [Header("Music Sources")]
-    [SerializeField] private AudioSource forestMusic;
-    [SerializeField] private AudioSource endingMusic;
+    public AudioMixerGroup dialogueGroup;
 
     private void Awake()
     {
@@ -40,6 +42,14 @@ public class AudioManager : MonoBehaviour
             sound.source = audioSource;
             soundsDict[sound.name] = sound;
         }
+
+        voicelineAudioSource = gameObject.AddComponent<AudioSource>();
+        voicelineAudioSource.clip = voicelines[0].GetClip();
+
+        foreach(Voiceline voiceline in voicelines)
+        {
+            voicelinesDict[voiceline.name] = voiceline;
+        }
     }
 
     public void PlaySound(string name)
@@ -48,16 +58,16 @@ public class AudioManager : MonoBehaviour
         sound.source.PlayOneShot(sound.GetClip());
     }
 
-    public void PlayFinalMusic()
+    public void PlayVoiceline(string name, Vector3 position = default)
     {
-        forestMusic.Stop();
-        endingMusic.Play();
-    }
+        AudioClip clip = voicelinesDict[name].GetClip();
+        if (voicelineAudioSource.isPlaying) 
+        {
+            //Fade out quickly so no clicks
+        }
 
-    public void PlayMainMusic()
-    {
-        forestMusic.Play();
-        endingMusic.Stop();
+        voicelineAudioSource.clip = clip;
+        voicelineAudioSource.Play();
     }
 
     [System.Serializable]
@@ -78,6 +88,54 @@ public class AudioManager : MonoBehaviour
             else
             {
                 currentClipIndex = 0;
+            }
+
+            return clips[currentClipIndex];
+        }
+    }
+
+    [System.Serializable]
+    public class Voiceline
+    {
+        public enum VoicelineMode
+        {
+            Single,
+            Cycle,
+            Linear,
+            Random,
+        }
+
+        public string name;
+        public AudioClip[] clips;
+        public VoicelineMode mode;
+        private int currentClipIndex = -1;
+
+        public AudioClip GetClip()
+        {
+            switch (mode) 
+            {
+                case VoicelineMode.Single:
+                    currentClipIndex = 0;
+                    break;
+                case VoicelineMode.Cycle:
+                    currentClipIndex++;
+                    currentClipIndex %= clips.Length;
+                    break;
+                case VoicelineMode.Linear:
+                    if (currentClipIndex < clips.Length) 
+                    {
+                        currentClipIndex++;
+                    }
+                    break;
+                case VoicelineMode.Random:
+                    int randomIndex = -1;
+                    do
+                    {
+                        randomIndex = Random.Range(0, clips.Length);
+                    } while (randomIndex == currentClipIndex);
+
+                    currentClipIndex = randomIndex;
+                    break;
             }
 
             return clips[currentClipIndex];

@@ -437,6 +437,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e161ac2c789b5d449306a6e704b471f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &18230917438194888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: sfxGroup
+      value: 
+      objectReference: {fileID: -476515911025847409, guid: 530217179dd05904bb816ded77df763e, type: 2}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: musicGroup
+      value: 
+      objectReference: {fileID: -7609679559544151832, guid: 530217179dd05904bb816ded77df763e, type: 2}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: masterGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 530217179dd05904bb816ded77df763e, type: 2}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: dialogueGroup
+      value: 
+      objectReference: {fileID: 4009142602998775024, guid: 530217179dd05904bb816ded77df763e, type: 2}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.data[0].mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.data[0].clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074512388841676056, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -445,3 +530,4 @@ SceneRoots:
   - {fileID: 811125613}
   - {fileID: 647809371}
   - {fileID: 171154475}
+  - {fileID: 18230917438194888}
