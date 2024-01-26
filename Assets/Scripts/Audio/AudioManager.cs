@@ -14,7 +14,8 @@ public class AudioManager : MonoBehaviour
 
     public Voiceline[] voicelines;
     private Dictionary<string, Voiceline> voicelinesDict = new();
-    private AudioSource voicelineAudioSource;
+    private AudioSource[] voicelineAudioSource = new AudioSource[2];
+    private int currentVoicelineSource = 0;
 
     public AudioMixerGroup masterGroup;
     public AudioMixerGroup musicGroup;
@@ -43,9 +44,10 @@ public class AudioManager : MonoBehaviour
             soundsDict[sound.name] = sound;
         }
 
-        voicelineAudioSource = gameObject.AddComponent<AudioSource>();
-        voicelineAudioSource.outputAudioMixerGroup = dialogueGroup;
-        voicelineAudioSource.clip = voicelines[0].GetClip();
+        voicelineAudioSource[0] = gameObject.AddComponent<AudioSource>();
+        voicelineAudioSource[1] = gameObject.AddComponent<AudioSource>();
+        voicelineAudioSource[0].outputAudioMixerGroup = dialogueGroup;
+        voicelineAudioSource[1].outputAudioMixerGroup = dialogueGroup;
 
         foreach(Voiceline voiceline in voicelines)
         {
@@ -62,13 +64,35 @@ public class AudioManager : MonoBehaviour
     public void PlayVoiceline(string name, Vector3 position = default)
     {
         AudioClip clip = voicelinesDict[name].GetClip();
-        if (voicelineAudioSource.isPlaying) 
+        AudioSource current = voicelineAudioSource[currentVoicelineSource];
+        AudioSource next = voicelineAudioSource[currentVoicelineSource ^ 1];
+        if (current.isPlaying) 
         {
-            //Fade out quickly so no clicks
+            //Fade out current quickly so no clicks
+            StartCoroutine(FadeOut(current));
+            //start next
         }
 
-        voicelineAudioSource.clip = clip;
-        voicelineAudioSource.Play();
+        next.clip = clip;
+        next.volume = 0f;
+        next.Play();
+        currentVoicelineSource ^= 1;
+    }
+
+    IEnumerator FadeOut(AudioSource source, float duration = 0.15f)
+    {
+        float startVolume = source.volume;
+        float timer = 0.0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, 0.0f, timer / duration);
+            yield return null; // Wait for the next frame
+        }
+
+        // Ensure volume is 0 when fading is done
+        source.volume = 0.0f;
     }
 
     [System.Serializable]

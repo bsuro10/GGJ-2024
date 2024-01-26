@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   voicelines: []
-  masterGroup: {fileID: 0}
-  musicGroup: {fileID: 0}
-  sfxGroup: {fileID: 0}
+  masterGroup: {fileID: 24300002, guid: 530217179dd05904bb816ded77df763e, type: 2}
+  musicGroup: {fileID: -7609679559544151832, guid: 530217179dd05904bb816ded77df763e, type: 2}
+  sfxGroup: {fileID: -476515911025847409, guid: 530217179dd05904bb816ded77df763e, type: 2}
+  dialogueGroup: {fileID: 4009142602998775024, guid: 530217179dd05904bb816ded77df763e, type: 2}
