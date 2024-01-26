@@ -3,21 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] sounds;
 
-    private Dictionary<string, Sound> soundsDict = new Dictionary<string, Sound>();
+    public Sound[] sounds;
+    private Dictionary<string, Sound> soundsDict = new();
+
+    public Voiceline[] voicelines;
+    private Dictionary<string, Voiceline> voicelinesDict = new();
+    private AudioSource[] voicelineAudioSource = new AudioSource[2];
+    private int currentVoicelineSource = 0;
 
     public AudioMixerGroup masterGroup;
     public AudioMixerGroup musicGroup;
     public AudioMixerGroup sfxGroup;
-
-    [Header("Music Sources")]
-    [SerializeField] private AudioSource forestMusic;
-    [SerializeField] private AudioSource endingMusic;
+    public AudioMixerGroup dialogueGroup;
 
     private void Awake()
     {
@@ -40,6 +43,16 @@ public class AudioManager : MonoBehaviour
             sound.source = audioSource;
             soundsDict[sound.name] = sound;
         }
+
+        voicelineAudioSource[0] = gameObject.AddComponent<AudioSource>();
+        voicelineAudioSource[1] = gameObject.AddComponent<AudioSource>();
+        voicelineAudioSource[0].outputAudioMixerGroup = dialogueGroup;
+        voicelineAudioSource[1].outputAudioMixerGroup = dialogueGroup;
+
+        foreach(Voiceline voiceline in voicelines)
+        {
+            voicelinesDict[voiceline.name] = voiceline;
+        }
     }
 
     public void PlaySound(string name)
@@ -48,16 +61,37 @@ public class AudioManager : MonoBehaviour
         sound.source.PlayOneShot(sound.GetClip());
     }
 
-    public void PlayFinalMusic()
+    public void PlayVoiceline(string name, Vector3 position = default)
     {
-        forestMusic.Stop();
-        endingMusic.Play();
+        AudioClip clip = voicelinesDict[name].GetClip();
+        AudioSource current = voicelineAudioSource[currentVoicelineSource];
+        AudioSource next = voicelineAudioSource[currentVoicelineSource ^ 1];
+        if (current.isPlaying) 
+        {
+            //Fade out current quickly so no clicks
+            StartCoroutine(FadeOut(current));
+        }
+
+        next.clip = clip;
+        next.volume = 1f;
+        next.Play();
+        currentVoicelineSource ^= 1;
     }
 
-    public void PlayMainMusic()
+    IEnumerator FadeOut(AudioSource source, float duration = 0.15f)
     {
-        forestMusic.Play();
-        endingMusic.Stop();
+        float startVolume = source.volume;
+        float timer = 0.0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, 0.0f, timer / duration);
+            yield return null; // Wait for the next frame
+        }
+
+        source.Stop();
+        source.volume = 1.0f;
     }
 
     [System.Serializable]
@@ -78,6 +112,54 @@ public class AudioManager : MonoBehaviour
             else
             {
                 currentClipIndex = 0;
+            }
+
+            return clips[currentClipIndex];
+        }
+    }
+
+    [System.Serializable]
+    public class Voiceline
+    {
+        public enum VoicelineMode
+        {
+            Single,
+            Cycle,
+            Linear,
+            Random,
+        }
+
+        public string name;
+        public AudioClip[] clips;
+        public VoicelineMode mode;
+        private int currentClipIndex = -1;
+
+        public AudioClip GetClip()
+        {
+            switch (mode) 
+            {
+                case VoicelineMode.Single:
+                    currentClipIndex = 0;
+                    break;
+                case VoicelineMode.Cycle:
+                    currentClipIndex++;
+                    currentClipIndex %= clips.Length;
+                    break;
+                case VoicelineMode.Linear:
+                    if (currentClipIndex < clips.Length) 
+                    {
+                        currentClipIndex++;
+                    }
+                    break;
+                case VoicelineMode.Random:
+                    int randomIndex = -1;
+                    do
+                    {
+                        randomIndex = Random.Range(0, clips.Length);
+                    } while (randomIndex == currentClipIndex);
+
+                    currentClipIndex = randomIndex;
+                    break;
             }
 
             return clips[currentClipIndex];
