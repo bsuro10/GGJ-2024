@@ -61,6 +61,12 @@ public class AudioManager : MonoBehaviour
         sound.source.PlayOneShot(sound.GetClip());
     }
 
+    public void PlayVoiceline(string name)
+    {
+        PlayVoiceline(name, 0 ,Vector3.zero);
+    }
+
+
     public void PlayVoiceline(string name, float delay = 0f, Vector3 position = default)
     {
         StartCoroutine(PlayVoicelineCR(name, delay, position));
