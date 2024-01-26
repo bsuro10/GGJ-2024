@@ -33,6 +33,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        public FootstepSoundSwitcher footstepSoundSwitcher;
+
         private float m_OriginalWalkSpeed;
         private Camera m_Camera;
         private bool m_Jump;
@@ -205,6 +207,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             lastFootstepTime = Time.time;
+
+            if (footstepSoundSwitcher.squeeky)
+            {
+                footstepSoundSwitcher.UpdateSqueekySteps();
+            }
         }
 
 
