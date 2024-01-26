@@ -51,10 +51,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
         public Vector3 instantVelocity;
 
+        private void Awake()
+        {
+            m_OriginalWalkSpeed = m_WalkSpeed;
+        }
+
         // Use this for initialization
         private void Start()
         {
-            m_OriginalWalkSpeed = m_WalkSpeed;
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -80,6 +84,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void SetMouseMovementLock(bool value)
         {
+
             isMouseMovementLocked = value;
         }
 

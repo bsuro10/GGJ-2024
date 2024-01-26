@@ -638,6 +638,17 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!114 &2077096038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6899127599400462786, guid: bcd70e2b9bcdd6d4fb931ae5215ebbd6, type: 3}
+  m_PrefabInstance: {fileID: 811097293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3116b945698434082e237415e4b494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1983360733316174429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -767,6 +778,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 581896554}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 581896554}
+    - target: {fileID: 5858979989944648672, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: afterEventCallback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2077096038}
+    - target: {fileID: 7553055234163316865, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2077096038}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
