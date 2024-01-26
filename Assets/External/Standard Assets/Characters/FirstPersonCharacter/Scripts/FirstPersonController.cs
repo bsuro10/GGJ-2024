@@ -27,6 +27,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_StepInterval;
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will play one after another;
         private int currentFootstepIndex = -1;
+        private float lastFootstepTime = 0f;
+        private float resetFootstepInterval;
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
@@ -58,6 +60,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            resetFootstepInterval = m_StepInterval + 0.3f;
         }
 
 
@@ -171,10 +174,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
-            currentFootstepIndex++;
-            currentFootstepIndex %= m_FootstepSounds.Length;
-            m_AudioSource.clip = m_FootstepSounds[currentFootstepIndex];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+
+            if(Time.time > lastFootstepTime + 0.8f)
+            {
+                currentFootstepIndex = 0;
+                m_AudioSource.PlayOneShot(m_FootstepSounds[currentFootstepIndex]);
+            }
+            else
+            {
+                currentFootstepIndex++;
+                currentFootstepIndex %= m_FootstepSounds.Length;
+                m_AudioSource.PlayOneShot(m_FootstepSounds[currentFootstepIndex]);
+            }
+
+            lastFootstepTime = Time.time;
         }
 
 
