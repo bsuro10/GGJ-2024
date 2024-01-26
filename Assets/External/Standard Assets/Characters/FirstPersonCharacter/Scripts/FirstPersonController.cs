@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will play one after another;
+        public AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will play one after another;
         private int currentFootstepIndex = -1;
         private float lastFootstepTime = 0f;
         private float resetFootstepInterval;
