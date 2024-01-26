@@ -70,11 +70,10 @@ public class AudioManager : MonoBehaviour
         {
             //Fade out current quickly so no clicks
             StartCoroutine(FadeOut(current));
-            //start next
         }
 
         next.clip = clip;
-        next.volume = 0f;
+        next.volume = 1f;
         next.Play();
         currentVoicelineSource ^= 1;
     }
@@ -91,8 +90,8 @@ public class AudioManager : MonoBehaviour
             yield return null; // Wait for the next frame
         }
 
-        // Ensure volume is 0 when fading is done
-        source.volume = 0.0f;
+        source.Stop();
+        source.volume = 1.0f;
     }
 
     [System.Serializable]
