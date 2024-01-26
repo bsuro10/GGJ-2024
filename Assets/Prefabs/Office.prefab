@@ -4727,7 +4727,7 @@ GameObject:
   - component: {fileID: 883349799059675328}
   - component: {fileID: 8531717167144050023}
   m_Layer: 3
-  m_Name: Cupboard
+  m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
