@@ -328,11 +328,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 043212f27c6c2ab4b9e241627b2876ce, type: 3}
---- !u!1 &139120275 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-  m_PrefabInstance: {fileID: 1019474334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &542437433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,10 +465,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.528
@@ -514,34 +505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: isMouseMovementLocked
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1456685466332132357, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: interactPrompt
       value: 
       objectReference: {fileID: 90963053}
-    - target: {fileID: 4417585685827157349, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6586654411780147567, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: cameraObj
-      value: 
-      objectReference: {fileID: 139120275}
-    - target: {fileID: 9111109275436075646, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9111109275436075646, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.781
-      objectReference: {fileID: 0}
-    - target: {fileID: 9111109275436075646, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.35
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -724,7 +691,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1320080600467098988, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1320080600467098988, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
