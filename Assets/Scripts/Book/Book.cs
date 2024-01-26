@@ -12,4 +12,9 @@ public class Book : MonoBehaviour
         Collectible collectible = this.AddComponent<Collectible>();
         collectible.item = bookItem;
     }
+
+    public void PlayNarratorVoiceWithinTheBook()
+    {
+
+    }
 }

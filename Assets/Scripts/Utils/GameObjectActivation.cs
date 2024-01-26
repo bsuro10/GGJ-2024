@@ -14,4 +14,14 @@ public class GameObjectActivation : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void SetEnabled(MonoBehaviour component)
+    {
+        component.enabled = true;
+    }
+
+    public void SetDisabled(MonoBehaviour component)
+    {
+        component.enabled = false;
+    }
+
 }

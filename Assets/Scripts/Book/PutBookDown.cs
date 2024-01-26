@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PutBookDown : MonoBehaviour
 {
 
-    [SerializeField] private GameObject book;
     [SerializeField] private UnityEvent afterCallback;
 
     private Animator animator;
 
     void Start()
     {
-        animator = book.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class PutBookDown : MonoBehaviour
         {
             animator.SetTrigger("PlaceDown");
             afterCallback.Invoke();
-            Destroy(this.gameObject);
+            this.enabled = false;
         }
     }
 }
