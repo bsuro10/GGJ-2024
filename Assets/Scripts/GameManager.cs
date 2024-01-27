@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private void Start()
+    {
+        AudioManager.Instance.PlaySound("open_book");
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -14,7 +19,7 @@ public class GameManager : MonoBehaviour
             // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
             UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();
+            //bruh
 #endif
         }
     }

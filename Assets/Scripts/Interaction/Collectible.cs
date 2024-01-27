@@ -21,7 +21,7 @@ public class Collectible : Interactable
     {
         Debug.Log("Picking up " + amount + " " + item.name);
         bool wasPickedUp = InventoryManager.Instance.Add(item, amount);
-
+        AudioManager.Instance.PlaySound("pickup");
         if (wasPickedUp)
             Destroy(gameObject);
     }
