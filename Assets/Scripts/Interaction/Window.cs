@@ -26,6 +26,7 @@ public class Window : Interactable
             book.GetComponent<Animator>().SetTrigger("Throw");
             cloneBookOnTable.SetActive(true);
             fireplace.SetActive(true);
+            AudioManager.Instance.PlayVoiceline("do_that_again", 2f);
         }
     }
 

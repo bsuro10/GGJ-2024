@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667ae30b00b10b14db9efcc69502ebed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 1.2
+  maxDistance: 1.57
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -474,6 +474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5551991676538437628}
   - component: {fileID: 740859601251070987}
+  - component: {fileID: 7347109659978071935}
   m_Layer: 6
   m_Name: NarratorVoiceStory
   m_TagString: Untagged
@@ -510,7 +511,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -592,6 +593,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7347109659978071935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686083923691450571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beae0f6386dbc864a97e0d0ce21b1daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 740859601251070987}
 --- !u!1001 &6127357564384604423
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -80,7 +80,62 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: bfe8cc643283fbb49b12b8c1c63d9ca9, type: 3}
     volume: 1
-  voicelines: []
+  voicelines:
+  - name: intro
+    clips:
+    - {fileID: 8300000, guid: 4ff6cda4e1bb5bb48ae4232bbf08d682, type: 3}
+    mode: 0
+  - name: keep_reading
+    clips:
+    - {fileID: 8300000, guid: f57552588468a5e4792f7a815cdf3099, type: 3}
+    mode: 0
+  - name: finally
+    clips:
+    - {fileID: 8300000, guid: 20c2be38c40d8f645b28ebfd74d5d273, type: 3}
+    mode: 0
+  - name: do_that_again
+    clips:
+    - {fileID: 8300000, guid: 6d7d0b59315f9cf4dbc3595316ca009f, type: 3}
+    mode: 0
+  - name: can't_stop_me
+    clips:
+    - {fileID: 8300000, guid: 806f0c7480ff99c41829a6d0e3ce4a06, type: 3}
+    mode: 0
+  - name: be_quiet
+    clips:
+    - {fileID: 8300000, guid: fdfffa9794b8b9345b14f1326d660cd8, type: 3}
+    mode: 0
+  - name: what_is_that_noise
+    clips:
+    - {fileID: 8300000, guid: 3fd7f05935b029b47a9d54a5c8c4aa63, type: 3}
+    mode: 0
+  - name: where'd_you_get_those
+    clips:
+    - {fileID: 8300000, guid: a8b7a4a032c97c946a48f3b9012f9dac, type: 3}
+    mode: 0
+  - name: not_gonna_take_those_boots_off
+    clips:
+    - {fileID: 8300000, guid: fd206c856c32fb6409985abd45f79397, type: 3}
+    mode: 0
+  - name: forgot_to_stop
+    clips:
+    - {fileID: 8300000, guid: bb86a1439eee96b4da21a961b95ba3c4, type: 3}
+    mode: 0
+  - name: door_bash
+    clips:
+    - {fileID: 8300000, guid: b5729459a28bc1f44b89544e93179408, type: 3}
+    mode: 0
+  - name: easy_puzzle
+    clips:
+    - {fileID: 8300000, guid: aee9e9b1a8f2a8d46a42c1f0f580502f, type: 3}
+    mode: 0
+  - name: light_switch
+    clips:
+    - {fileID: 8300000, guid: 11d9f4f962148a3488fd0181e619606b, type: 3}
+    mode: 0
+  - name: there_it_is
+    clips: []
+    mode: 0
   masterGroup: {fileID: 24300002, guid: 530217179dd05904bb816ded77df763e, type: 2}
   musicGroup: {fileID: -7609679559544151832, guid: 530217179dd05904bb816ded77df763e, type: 2}
   sfxGroup: {fileID: -476515911025847409, guid: 530217179dd05904bb816ded77df763e, type: 2}

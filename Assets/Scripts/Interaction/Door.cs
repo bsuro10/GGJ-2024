@@ -30,6 +30,7 @@ public class Door : MonoBehaviour
         print("Bashing door open");
         animator.SetTrigger("bashOpen");
         door.GetComponent<BoxCollider>().enabled = false;
+        AudioManager.Instance.PlayVoiceline("door_bash", 2f);
         AudioManager.Instance.PlaySound("door_bash");
     }
 
