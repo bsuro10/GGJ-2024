@@ -80,6 +80,16 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: bfe8cc643283fbb49b12b8c1c63d9ca9, type: 3}
     volume: 1
+  - name: pickup
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: bcf6e7af94d7d4f4bbf36dbeadca096b, type: 3}
+    volume: 1
+  - name: putdown
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: a203f6cdb73dfd84ebe42c323aa3bb3b, type: 3}
+    volume: 1
   voicelines:
   - name: intro
     clips:
