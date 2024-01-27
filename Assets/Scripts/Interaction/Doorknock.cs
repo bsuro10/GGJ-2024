@@ -9,7 +9,7 @@ public class Doorknock : Interactable
     public override void Interact()
     {
         AudioManager.Instance.PlaySound("doorbell");
-        GetComponent<SphereCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         doorbell.GetComponent<SphereCollider>().enabled = false;
         door.Invoke(nameof(door.OpenSlightly), 4f);
     }

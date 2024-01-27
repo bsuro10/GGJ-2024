@@ -6017,18 +6017,32 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0566d22eb7881ed4fa1b3c47e605c271, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 291418946872418439}
+      addedObject: {fileID: 6756627358575686648}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0566d22eb7881ed4fa1b3c47e605c271, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6756627358575686648}
+      addedObject: {fileID: 3222100116388440680}
   m_SourcePrefab: {fileID: 100100000, guid: 0566d22eb7881ed4fa1b3c47e605c271, type: 3}
 --- !u!1 &1661446570799453267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0566d22eb7881ed4fa1b3c47e605c271, type: 3}
   m_PrefabInstance: {fileID: 2004045808978618626}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &291418946872418439
-SphereCollider:
+--- !u!114 &6756627358575686648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661446570799453267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03e7a934527a6640b8f3da6546fd08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 2207798469646419985}
+  doorbell: {fileID: 3541886516611478240}
+--- !u!65 &3222100116388440680
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6046,22 +6060,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.04
-  m_Center: {x: 1.1055353e-11, y: -0.015514161, z: 0}
---- !u!114 &6756627358575686648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661446570799453267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b03e7a934527a6640b8f3da6546fd08a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 2207798469646419985}
-  doorbell: {fileID: 3541886516611478240}
+  m_Size: {x: 0.015246033, y: 0.079748005, z: 0.16111043}
+  m_Center: {x: -0.02, y: -0.01, z: -0.03}
 --- !u!4 &2037162460426440425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0566d22eb7881ed4fa1b3c47e605c271, type: 3}
