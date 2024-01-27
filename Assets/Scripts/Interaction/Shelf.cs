@@ -47,7 +47,8 @@ public class Shelf : Interactable
             bookItemHidden.SetActive(false);
             bookAudioSource.Stop();
             print("stopped closet voice story");
-            narratorVoiceStory.Play(0);
+            AudioManager.Instance.PlayVoiceline("finally");
+            narratorVoiceStory.Play(3f);
             narratorVoiceStory.source.timeSamples = bookAudioSource.timeSamples;
             this.enabled = false;
         }
