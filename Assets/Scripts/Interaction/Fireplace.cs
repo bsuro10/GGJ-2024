@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fireplace : Interactable
 {
     [SerializeField] private Transform bookThrowingTransform;
     [SerializeField] private Item bookItemRef;
     [SerializeField] private GameObject book;
+    [SerializeField] private UnityEvent afterCallback;
+    [SerializeField] private float afterCallbackDelay;
 
     private bool wasInteracted = false;
 
@@ -22,6 +25,7 @@ public class Fireplace : Interactable
             book.SetActive(true);
             book.transform.position = bookThrowingTransform.position;
             book.GetComponent<Animator>().SetTrigger("Throw");
+            StartCoroutine(InvokeAfterDelay());
         }
     }
 
@@ -29,6 +33,12 @@ public class Fireplace : Interactable
     {
         if (wasInteracted) return "";
         return base.GetText();
+    }
+
+    IEnumerator InvokeAfterDelay()
+    {
+        yield return new WaitForSeconds(afterCallbackDelay);
+        afterCallback.Invoke();
     }
 
 }
