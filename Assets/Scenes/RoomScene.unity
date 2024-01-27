@@ -1021,6 +1021,10 @@ PrefabInstance:
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1340937540}
+    - target: {fileID: 1320080600467098988, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: intro
+      objectReference: {fileID: 0}
     - target: {fileID: 4003191573823108788, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: m_IsActive
       value: 0
