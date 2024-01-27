@@ -841,7 +841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 419430950588737212, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: you_cant_get_away
+      value: keep_reading
       objectReference: {fileID: 0}
     - target: {fileID: 419430950588737212, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
@@ -906,6 +906,22 @@ PrefabInstance:
     - target: {fileID: 4503260647588113966, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731018978029425932, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.16787976
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731018978029425932, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.43052137
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731018978029425932, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 0.71648407
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731018978029425932, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.5294752
       objectReference: {fileID: 0}
     - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target

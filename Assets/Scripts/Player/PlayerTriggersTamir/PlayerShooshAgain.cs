@@ -9,7 +9,6 @@ public class PlayerShooshAgain : PlayerTrigger
     public GameObject boots;
     protected override void OnPlayerTriggerEnter()
     {
-        AudioManager.Instance.PlayVoiceline("shoosh_again");
         footstepSoundSwitcher.StartSqueeky();
         boots.SetActive(true);
     }
