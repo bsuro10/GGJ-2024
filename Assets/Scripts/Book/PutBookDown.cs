@@ -15,6 +15,7 @@ public class PutBookDown : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             bookAnimator.SetTrigger("PlaceDown");
+            AudioManager.Instance.PlaySound("close_book");
             afterCallback.Invoke();
             this.enabled = false;
         }
