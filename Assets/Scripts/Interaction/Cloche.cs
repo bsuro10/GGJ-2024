@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Cloche : Interactable
 {
+
     public override void Interact()
     {
         gameObject.layer = LayerMask.NameToLayer("Default");
         GetComponent<Animator>().SetTrigger("open");
+    }
+
+    public void SetCollectible()
+    {
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
 }
