@@ -20,21 +20,14 @@ public class Door : MonoBehaviour
     public void OpenSlightly()
     {
         animator.SetTrigger("openSlightly");
-        AudioManager.Instance.PlaySound("open_door_slightly");
+        door.AddComponent<DoorOfficeToHallway>();
+        //AudioManager.Instance.PlaySound("open_door_slightly");
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.C)) OpenSlightly();
-        else if (Input.GetKeyDown(KeyCode.V)) BashOpenDoor();
-    }
     [ContextMenu("Bash open door")]
     public void BashOpenDoor()
     {
-        Rigidbody doorBody = door.GetComponent<Rigidbody>();
-        doorBody.isKinematic = false;
-        doorBody.AddForce((transform.forward + transform.up * 0.5f).normalized * 50f, ForceMode.Impulse);
-        doorBody.AddTorque(new Vector3(10f, 5f, 0f) * 500f, ForceMode.Impulse);
+        print("Bashing door open");
         //AudioManager.Instance.PlaySound("bash_open_door");
     }
 
