@@ -144,7 +144,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 11d9f4f962148a3488fd0181e619606b, type: 3}
     mode: 0
   - name: there_it_is
-    clips: []
+    clips:
+    - {fileID: 8300000, guid: b3cf5659b7a79a9458832eb729810777, type: 3}
     mode: 0
   masterGroup: {fileID: 24300002, guid: 530217179dd05904bb816ded77df763e, type: 2}
   musicGroup: {fileID: -7609679559544151832, guid: 530217179dd05904bb816ded77df763e, type: 2}
