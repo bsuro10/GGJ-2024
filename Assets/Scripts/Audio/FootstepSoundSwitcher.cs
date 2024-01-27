@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,12 @@ public class FootstepSoundSwitcher : MonoBehaviour
     public int squeekySteps = 0;
 
     public int squeekSequence = 0;
+
+    public bool stop = false;
     public void StartSqueeky()
     {
+        if (stop) return;
+
         controller.m_FootstepSounds = squeekyBoots;
         squeekSequence += 1;
         squeeky = true;
@@ -28,8 +33,10 @@ public class FootstepSoundSwitcher : MonoBehaviour
 
     public void UpdateSqueekySteps()
     {
+        if (stop) return;
+
         squeekySteps += 1;
-        if(squeekySteps == 5 && squeekSequence == 1)
+        if (squeekySteps == 5 && squeekSequence == 1)
         {
             AudioManager.Instance.PlayVoiceline("where'd_you_get_those");
         }
@@ -42,5 +49,11 @@ public class FootstepSoundSwitcher : MonoBehaviour
             AudioManager.Instance.PlayVoiceline("forgot_to_stop");
             StopSqueeky();
         }
+    }
+
+    public void StopForGood()
+    {
+        StopSqueeky();
+        stop = true;
     }
 }
