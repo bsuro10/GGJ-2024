@@ -6,9 +6,11 @@ public class Shelf : Interactable
 {
     [SerializeField] private Item bookItemRef;
     [SerializeField] private GameObject bookItemHidden;
+    private AudioSource bookAudioSource;
     [SerializeField] private string voiceline;
     [SerializeField] private float delay;
     [SerializeField] private GameObject window;
+    [SerializeField] private NarratorVoiceStory narratorVoiceStory;
 
     private Item currentItem;
     private bool canPickBookBack = false;
@@ -17,6 +19,7 @@ public class Shelf : Interactable
     private void Start()
     {
         bookItemHidden.SetActive(false);
+        bookAudioSource = bookItemHidden.GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -29,7 +32,12 @@ public class Shelf : Interactable
             currentItem = bookItemRef;
             bookItemHidden.SetActive(true);
             InventoryManager.Instance.Remove(currentItem);
-            StartCoroutine(InvokeVoicelineAfterDelay());
+            bookAudioSource.Play();
+            print("started closet voice story");
+            narratorVoiceStory.Stop();
+            bookAudioSource.timeSamples = narratorVoiceStory.source.timeSamples;
+            this.canPickBookBack = true;
+            this.window.SetActive(true);
         } 
         else if (canPickBookBack && currentItem.name.Equals(bookItemRef.name))
         {
@@ -37,6 +45,10 @@ public class Shelf : Interactable
             InventoryManager.Instance.Add(currentItem);
             currentItem = null;
             bookItemHidden.SetActive(false);
+            bookAudioSource.Stop();
+            print("stopped closet voice story");
+            narratorVoiceStory.Play(0);
+            narratorVoiceStory.source.timeSamples = bookAudioSource.timeSamples;
             this.enabled = false;
         }
     }
@@ -49,13 +61,4 @@ public class Shelf : Interactable
         }
         return base.GetText();
     }
-
-    IEnumerator InvokeVoicelineAfterDelay()
-    {
-        yield return new WaitForSeconds(delay);
-        AudioManager.Instance.PlayVoiceline(voiceline);
-        this.canPickBookBack = true;
-        this.window.SetActive(true);
-    }
-
 }

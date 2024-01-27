@@ -8,12 +8,10 @@ public class Doorknock : Interactable
     [SerializeField] private Doorbell doorbell;
     public override void Interact()
     {
-        // ring doorbell loudly
-        door.Invoke(nameof(door.OpenSlightly), 4f);
-        //AudioManager.Instance.PlaySound("loud_doorbell");
-
+        AudioManager.Instance.PlaySound("doorbell");
         GetComponent<SphereCollider>().enabled = false;
         doorbell.GetComponent<SphereCollider>().enabled = false;
+        door.Invoke(nameof(door.OpenSlightly), 4f);
     }
 
     public override string GetText()
