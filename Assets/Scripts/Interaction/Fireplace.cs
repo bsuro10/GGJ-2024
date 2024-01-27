@@ -11,6 +11,8 @@ public class Fireplace : Interactable
     [SerializeField] private UnityEvent afterCallback;
     [SerializeField] private float afterCallbackDelay;
 
+    [SerializeField] private AudioSource bookFireAudio;
+
     private bool wasInteracted = false;
 
     public override void Interact()
@@ -25,6 +27,7 @@ public class Fireplace : Interactable
             book.SetActive(true);
             book.transform.position = bookThrowingTransform.position;
             book.GetComponent<Animator>().SetTrigger("Throw");
+            bookFireAudio.PlayDelayed(0.2f);
             StartCoroutine(InvokeAfterDelay());
         }
     }
