@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMouseMovementLocked: 1
   m_IsWalking: 0
-  m_WalkSpeed: 5
+  m_WalkSpeed: 3
   m_RunSpeed: 1
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 0
@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 7347109659978071935}
   - component: {fileID: 3653749283363177281}
   - component: {fileID: 7387533599442342926}
+  - component: {fileID: 6076702383132346292}
   m_Layer: 6
   m_Name: NarratorVoiceStory
   m_TagString: Untagged
@@ -622,6 +623,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 740859601251070987}
 --- !u!114 &7387533599442342926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686083923691450571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beae0f6386dbc864a97e0d0ce21b1daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 740859601251070987}
+--- !u!114 &6076702383132346292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
