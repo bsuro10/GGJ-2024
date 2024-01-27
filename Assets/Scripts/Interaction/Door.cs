@@ -28,6 +28,8 @@ public class Door : MonoBehaviour
     public void BashOpenDoor()
     {
         print("Bashing door open");
+        animator.SetTrigger("bashOpen");
+        door.GetComponent<BoxCollider>().enabled = false;
         AudioManager.Instance.PlaySound("door_bash");
     }
 

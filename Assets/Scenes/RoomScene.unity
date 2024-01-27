@@ -654,6 +654,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 291418946872418439, guid: 59a9f3e4ddc411145aa9f29d674ad71e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2001888852145774275, guid: 59a9f3e4ddc411145aa9f29d674ad71e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 51.853
@@ -710,6 +714,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7286488514197195475, guid: 59a9f3e4ddc411145aa9f29d674ad71e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5300173
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286488514197195475, guid: 59a9f3e4ddc411145aa9f29d674ad71e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.971434
+      objectReference: {fileID: 0}
     - target: {fileID: 7575910362427605555, guid: 59a9f3e4ddc411145aa9f29d674ad71e, type: 3}
       propertyPath: m_Name
       value: Hallway
@@ -738,10 +750,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 134422960035095326, guid: 3e9342acd12a94b4abef358e638a2cbb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 7471472093777481070, guid: 3e9342acd12a94b4abef358e638a2cbb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.562099
