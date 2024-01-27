@@ -304,7 +304,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5187250834399262223, guid: 4d0f5a8f933a0d04e8b4821141243044, type: 3}
       propertyPath: startGameSceneName
-      value: 1
+      value: RoomScene
       objectReference: {fileID: 0}
     - target: {fileID: 6531841288951814298, guid: 4d0f5a8f933a0d04e8b4821141243044, type: 3}
       propertyPath: m_Enabled

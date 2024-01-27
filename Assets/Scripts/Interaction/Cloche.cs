@@ -15,5 +15,4 @@ public class Cloche : Interactable
     {
         gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
-
 }

@@ -6,7 +6,6 @@ public class LeverCollectible : Collectible
 {
     public override void PickUp()
     {
-        AudioManager.Instance.PlayVoiceline("there_it_is");
         base.PickUp();
     }
 }
