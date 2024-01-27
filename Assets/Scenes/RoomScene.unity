@@ -358,9 +358,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a1dff15ff5c8c43adad0a09bc08966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  storyLines: []
-  remarks: []
+  source: {fileID: 178037133}
+  storyLines:
+  - {fileID: 8300000, guid: 6f5930847f0df3b4fb9d9ffad7307523, type: 3}
+  - {fileID: 8300000, guid: 129f33afbffa48a4e94dce2af1af534d, type: 3}
+  - {fileID: 8300000, guid: 90b8045bffeee58408836fe882aaf817, type: 3}
+  remarks:
+  - {fileID: 8300000, guid: f57552588468a5e4792f7a815cdf3099, type: 3}
   currStory: 0
   currRemark: 0
 --- !u!82 &178037133
@@ -1253,7 +1257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1274,18 +1278,18 @@ PrefabInstance:
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 949075082}
+      objectReference: {fileID: 178037132}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: Pause
+      value: pauseForDelay
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: NarratorVoiceStory, Assembly-CSharp
+      value: Narrator, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
@@ -1293,7 +1297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_FloatArgument
-      value: 0
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8385197271301361056, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
