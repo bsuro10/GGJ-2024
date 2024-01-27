@@ -27,7 +27,7 @@ public class Fireplace : Interactable
             book.SetActive(true);
             book.transform.position = bookThrowingTransform.position;
             book.GetComponent<Animator>().SetTrigger("Throw");
-            bookFireAudio.PlayDelayed(0.2f);
+            bookFireAudio.PlayDelayed(0.1f);
             StartCoroutine(InvokeAfterDelay());
         }
     }
