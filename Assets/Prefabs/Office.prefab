@@ -2202,7 +2202,7 @@ MonoBehaviour:
           m_StringArgument: prologue
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6899127599400462786, guid: bcd70e2b9bcdd6d4fb931ae5215ebbd6, type: 3}
         m_TargetAssemblyTypeName: GameObjectActivation, Assembly-CSharp
         m_MethodName: SetActive
         m_Mode: 2
