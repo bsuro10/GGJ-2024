@@ -7,20 +7,14 @@ using UnityEngine.Events;
 public class PutBookDown : MonoBehaviour
 {
 
+    [SerializeField] private Animator bookAnimator;
     [SerializeField] private UnityEvent afterCallback;
-
-    private Animator animator;
-
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            animator.SetTrigger("PlaceDown");
+            bookAnimator.SetTrigger("PlaceDown");
             afterCallback.Invoke();
             this.enabled = false;
         }
