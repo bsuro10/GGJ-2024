@@ -36,8 +36,7 @@ public class Shelf : Interactable
             print("started closet voice story");
             narratorVoiceStory.Stop();
             bookAudioSource.timeSamples = narratorVoiceStory.source.timeSamples;
-            this.canPickBookBack = true;
-            this.window.SetActive(true);
+            StartCoroutine(InvokeDelayOnPickUpBook());
         } 
         else if (canPickBookBack && currentItem.name.Equals(bookItemRef.name))
         {
@@ -61,4 +60,12 @@ public class Shelf : Interactable
         }
         return base.GetText();
     }
+
+    IEnumerator InvokeDelayOnPickUpBook()
+    {
+        yield return new WaitForSeconds(delay);
+        this.canPickBookBack = true;
+        this.window.SetActive(true);
+    }
+
 }

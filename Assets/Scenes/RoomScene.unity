@@ -908,37 +908,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallbackDelay
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1983360733316174430}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Open
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Door, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295193616249119634, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
-      propertyPath: afterCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7553055234163316865, guid: 1b6bcf75ebf5f954a833664a5ffcecf3, type: 3}
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1148,7 +1120,6 @@ AudioSource:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 7648615126968717458}
   - {fileID: 1019474334}
   - {fileID: 90963051}
   - {fileID: 120074247}
@@ -1156,3 +1127,4 @@ SceneRoots:
   - {fileID: 1983360733316174429}
   - {fileID: 811097293}
   - {fileID: 4699631900854424877}
+  - {fileID: 7648615126968717458}
