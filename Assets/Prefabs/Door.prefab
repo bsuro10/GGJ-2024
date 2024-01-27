@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3510698687268188846}
   - component: {fileID: 3878460833517757564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 2829717539082903032}
   - component: {fileID: 2527336940300438470}
   - component: {fileID: 2412591241070788969}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 7423085539893432011}
   - component: {fileID: 3738873860567494435}
   - component: {fileID: 3838691312418591975}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Door_Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 872043168376395807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ForcePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
