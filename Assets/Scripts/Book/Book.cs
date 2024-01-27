@@ -13,8 +13,4 @@ public class Book : MonoBehaviour
         collectible.item = bookItem;
     }
 
-    public void PlayNarratorVoiceWithinTheBook()
-    {
-
-    }
 }
