@@ -23,6 +23,7 @@ public class Lightswitch : Interactable
 
     IEnumerator DelayedLightPoint()
     {
+        AudioManager.Instance.PlayVoiceline("light_switch");
         yield return new WaitForSeconds(delay);
         delayedLightPoint.SetActive(true);
     }
