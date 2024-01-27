@@ -3356,6 +3356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7471472093777481070}
     m_Modifications:
+    - target: {fileID: 4822121688225733135, guid: 4461a5f4a8c763a498fae110e8c67787, type: 3}
+      propertyPath: firstChest
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5949491036334149887, guid: 4461a5f4a8c763a498fae110e8c67787, type: 3}
       propertyPath: m_Name
       value: Chest1
