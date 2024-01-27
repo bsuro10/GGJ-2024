@@ -79,10 +79,26 @@ public class Narrator : MonoBehaviour
         
     }
 
+    IEnumerator FadeOut(float duration = 0.15f)
+    {
+        float startVolume = source.volume;
+        float timer = 0.0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, 0.0f, timer / duration);
+            yield return null; // Wait for the next frame
+        }
+
+        source.Stop();
+        source.volume = 1.0f;
+    }
+
     private IEnumerator delayStopAudio()
     {
         yield return new WaitForSeconds(1f);
         isStopped = true;
-        source.Stop();
+        StartCoroutine(FadeOut());
     }
 }
