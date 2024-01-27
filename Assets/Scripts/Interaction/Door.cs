@@ -20,8 +20,8 @@ public class Door : MonoBehaviour
     public void OpenSlightly()
     {
         animator.SetTrigger("openSlightly");
+        AudioManager.Instance.PlaySound("door_creek");
         door.AddComponent<DoorOfficeToHallway>();
-        //AudioManager.Instance.PlaySound("open_door_slightly");
     }
 
     [ContextMenu("Bash open door")]
