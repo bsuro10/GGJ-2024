@@ -5,10 +5,15 @@ using UnityEngine.Events;
 
 public class ShooshPlayerTrigger : PlayerTrigger
 {
+    public Door officeToHallwayDoor;
+    public bool shooshed = false;
     protected override void OnPlayerTriggerEnter()
     {
-        // Close door
-        print("close door");
-        AudioManager.Instance.PlayVoiceline("be_quiet");
+        if(!shooshed) 
+        {
+            officeToHallwayDoor.Close();
+            AudioManager.Instance.PlayVoiceline("be_quiet");
+            shooshed = true;
+        }
     }
 }

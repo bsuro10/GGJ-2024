@@ -44,7 +44,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52d8f2018ecee48b219c0a7ddc17a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: open_door
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 3bc3cf04d30bfb5408c7910d8df108e5, type: 3}
+    volume: 1
+  - name: close_door
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: a1e72f378aba8e746b5bb33cd6cb7708, type: 3}
+    volume: 1
+  - name: open_book
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 822292e76816a59469526239b837583c, type: 3}
+    volume: 1
+  - name: close_book
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 15be2958b9bd67b4e9f5d75ac578067b, type: 3}
+    volume: 1
   voicelines: []
   masterGroup: {fileID: 24300002, guid: 530217179dd05904bb816ded77df763e, type: 2}
   musicGroup: {fileID: -7609679559544151832, guid: 530217179dd05904bb816ded77df763e, type: 2}
