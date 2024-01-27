@@ -11,6 +11,7 @@ public class Narrator : MonoBehaviour
     [SerializeField] private AudioClip[] remarks;
     [SerializeField] private Transform targetTransform;
     [SerializeField] public Transform player;
+    [SerializeField] private AudioLowPassFilter lowPassFilter;
     [SerializeField] int currStory = 0;
     [SerializeField] int currRemark = 0;
     private bool isStopped = false;
@@ -28,12 +29,6 @@ public class Narrator : MonoBehaviour
 
  
     }
-
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(targetTransform != null)
@@ -71,6 +66,14 @@ public class Narrator : MonoBehaviour
     public void setTarget(Transform targetTransform)
     {
         this.targetTransform = targetTransform;
+        if (targetTransform.name == "book_on_shelf")
+        {
+            lowPassFilter.enabled = true;
+        }
+        else
+        {
+            lowPassFilter.enabled = false;
+        }
     }
 
     public void stopAudio()
