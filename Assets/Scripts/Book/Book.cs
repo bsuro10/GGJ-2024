@@ -9,8 +9,7 @@ public class Book : MonoBehaviour
 
     public void SetCollectible()
     {
-        Collectible collectible = this.AddComponent<Collectible>();
-        collectible.item = bookItem;
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
 }

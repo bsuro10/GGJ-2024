@@ -24,10 +24,18 @@ public class Window : Interactable
             book.SetActive(true);
             book.transform.position = bookThrowingTransform.position;
             book.GetComponent<Animator>().SetTrigger("Throw");
-            cloneBookOnTable.SetActive(true);
-            fireplace.SetActive(true);
-            AudioManager.Instance.PlayVoiceline("do_that_again", 2f);
+            Narrator.Instance.setTarget(book.transform);
+            StartCoroutine(spawnFlyingBook());
         }
+    }
+
+    private IEnumerator spawnFlyingBook()
+    {
+        yield return new WaitForSeconds(1f);
+        cloneBookOnTable.SetActive(true);
+        fireplace.SetActive(true);
+        Narrator.Instance.pauseForDelay(1.5f);
+        Narrator.Instance.setTarget(cloneBookOnTable.transform);
     }
 
     public override string GetText()
