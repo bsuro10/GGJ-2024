@@ -232,7 +232,7 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -476515911025847409, guid: 530217179dd05904bb816ded77df763e, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.515
@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 740859601251070987}
   - component: {fileID: 7347109659978071935}
   - component: {fileID: 3653749283363177281}
+  - component: {fileID: 7387533599442342926}
   m_Layer: 6
   m_Name: NarratorVoiceStory
   m_TagString: Untagged
@@ -608,6 +609,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 740859601251070987}
 --- !u!114 &3653749283363177281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686083923691450571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beae0f6386dbc864a97e0d0ce21b1daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 740859601251070987}
+--- !u!114 &7387533599442342926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
