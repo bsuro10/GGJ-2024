@@ -235,7 +235,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.515
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 5551991676538437628}
   - component: {fileID: 740859601251070987}
   - component: {fileID: 7347109659978071935}
+  - component: {fileID: 3653749283363177281}
   m_Layer: 6
   m_Name: NarratorVoiceStory
   m_TagString: Untagged
@@ -594,6 +595,19 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!114 &7347109659978071935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686083923691450571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beae0f6386dbc864a97e0d0ce21b1daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 740859601251070987}
+--- !u!114 &3653749283363177281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
