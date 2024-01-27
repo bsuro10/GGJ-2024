@@ -31,10 +31,10 @@ public class Window : Interactable
 
     private IEnumerator spawnFlyingBook()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         cloneBookOnTable.SetActive(true);
         fireplace.SetActive(true);
-        Narrator.Instance.pauseForDelay(1f);
+        Narrator.Instance.pauseForDelay(1.5f);
         Narrator.Instance.setTarget(cloneBookOnTable.transform);
     }
 

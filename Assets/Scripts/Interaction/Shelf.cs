@@ -40,7 +40,7 @@ public class Shelf : Interactable
             bookItemHidden.SetActive(false);
             AudioManager.Instance.PlaySound("pickup");
             Narrator.Instance.setTarget(Narrator.Instance.player);
-            Narrator.Instance.pauseForDelay(1);
+            Narrator.Instance.pauseForDelay(0);
             this.enabled = false;
         }
     }

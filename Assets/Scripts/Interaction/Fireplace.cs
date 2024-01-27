@@ -26,8 +26,10 @@ public class Fireplace : Interactable
             InventoryManager.Instance.Remove(bookItemRef);
             book.SetActive(true);
             book.transform.position = bookThrowingTransform.position;
+            Narrator.Instance.setTarget(book.transform);
             book.GetComponent<Animator>().SetTrigger("Throw");
             bookFireAudio.PlayDelayed(0.1f);
+            Narrator.Instance.stopAudio();
             AudioManager.Instance.PlayVoiceline("can't_stop_me", 4f);
             StartCoroutine(InvokeAfterDelay());
         }

@@ -13,6 +13,7 @@ public class Narrator : MonoBehaviour
     [SerializeField] public Transform player;
     [SerializeField] int currStory = 0;
     [SerializeField] int currRemark = 0;
+    private bool isStopped = false;
 
     private void Awake()
     {
@@ -40,7 +41,7 @@ public class Narrator : MonoBehaviour
             this.transform.position = targetTransform.position;
         }
 
-        if (!source.isPlaying) playStory();
+        if (!source.isPlaying && !isStopped) playStory();
     }
 
     void playStory()
@@ -70,5 +71,18 @@ public class Narrator : MonoBehaviour
     public void setTarget(Transform targetTransform)
     {
         this.targetTransform = targetTransform;
+    }
+
+    public void stopAudio()
+    {
+        StartCoroutine(delayStopAudio());
+        
+    }
+
+    private IEnumerator delayStopAudio()
+    {
+        yield return new WaitForSeconds(1f);
+        isStopped = true;
+        source.Stop();
     }
 }
