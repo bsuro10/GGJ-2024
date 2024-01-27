@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Chest : Interactable
+public class Lever : Interactable
 {
-    [SerializeField] private Animator animator;
     [SerializeField] private UnityEvent callback;
 
     public override void Interact()
     {
+        GetComponent<Animator>().SetBool("LeverDown", true);
         gameObject.layer = LayerMask.NameToLayer("Default");
-        animator.SetBool("isOpen", true);
+        callback.Invoke();
     }
 
     public override string GetText()
     {
-        return "Press 'E' to open.";
-    }
-
-    public void TriggerCallback()
-    {
-        callback.Invoke();
+        return "SHUT DOWN the narrator";
     }
 
 }
