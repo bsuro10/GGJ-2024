@@ -29,13 +29,17 @@ public class FootstepSoundSwitcher : MonoBehaviour
     public void UpdateSqueekySteps()
     {
         squeekySteps += 1;
-        if(squeekySteps % 5 == 0 && squeekSequence == 1)
+        if(squeekySteps == 5 && squeekSequence == 1)
         {
-            AudioManager.Instance.PlayVoiceline("snarkey_boots_comment");
+            AudioManager.Instance.PlayVoiceline("where'd_you_get_those");
+        }
+        else if (squeekySteps == 12 && squeekSequence == 1)
+        {
+            AudioManager.Instance.PlayVoiceline("not_gonna_take_those_boots_off");
         }
         else if (squeekySteps == 4 && squeekSequence == 2)
         {
-            AudioManager.Instance.PlayVoiceline("admits_boots_sounds");
+            AudioManager.Instance.PlayVoiceline("forgot_to_stop");
             StopSqueeky();
         }
     }
