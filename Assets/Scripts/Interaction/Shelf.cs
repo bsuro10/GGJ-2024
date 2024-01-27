@@ -35,6 +35,7 @@ public class Shelf : Interactable
             bookAudioSource.Play();
             print("started closet voice story");
             narratorVoiceStory.Stop();
+            AudioManager.Instance.PlaySound("putdown");
             bookAudioSource.timeSamples = narratorVoiceStory.source.timeSamples;
             StartCoroutine(InvokeDelayOnPickUpBook());
         } 
@@ -47,6 +48,7 @@ public class Shelf : Interactable
             bookAudioSource.Stop();
             print("stopped closet voice story");
             AudioManager.Instance.PlayVoiceline("finally");
+            AudioManager.Instance.PlaySound("pickup");
             narratorVoiceStory.Play(3f);
             narratorVoiceStory.source.timeSamples = bookAudioSource.timeSamples;
             this.enabled = false;

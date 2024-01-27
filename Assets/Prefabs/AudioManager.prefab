@@ -69,7 +69,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: bdb1ed01afeede2408eeb8ddab366285, type: 3}
-    volume: 1
+    volume: 0.805
   - name: door_creek
     source: {fileID: 0}
     clips:
@@ -84,12 +84,12 @@ MonoBehaviour:
     source: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: bcf6e7af94d7d4f4bbf36dbeadca096b, type: 3}
-    volume: 1
+    volume: 0.51
   - name: putdown
     source: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: a203f6cdb73dfd84ebe42c323aa3bb3b, type: 3}
-    volume: 1
+    volume: 0.505
   voicelines:
   - name: intro
     clips:
