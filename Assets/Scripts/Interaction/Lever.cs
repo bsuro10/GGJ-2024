@@ -11,6 +11,13 @@ public class Lever : Interactable
     {
         GetComponent<Animator>().SetBool("LeverDown", true);
         gameObject.layer = LayerMask.NameToLayer("Default");
+        AudioManager.Instance.PlayVoiceline("ending", 1f);
+        StartCoroutine(Callback());
+    }
+
+    IEnumerator Callback()
+    {
+        yield return new WaitForSeconds(1.0f);
         callback.Invoke();
     }
 
