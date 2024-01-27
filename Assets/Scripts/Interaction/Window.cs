@@ -8,6 +8,7 @@ public class Window : Interactable
     [SerializeField] private GameObject book;
     [SerializeField] private GameObject cloneBookOnTable;
     [SerializeField] private Item bookItemRef;
+    [SerializeField] private GameObject fireplace;
 
     private bool wasInteracted = false;
 
@@ -24,6 +25,7 @@ public class Window : Interactable
             book.transform.position = bookThrowingTransform.position;
             book.GetComponent<Animator>().SetTrigger("Throw");
             cloneBookOnTable.SetActive(true);
+            fireplace.SetActive(true);
         }
     }
 
