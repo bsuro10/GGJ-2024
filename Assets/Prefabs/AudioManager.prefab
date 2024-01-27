@@ -75,6 +75,11 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: e32098421162f2749be97b0c0410d8c7, type: 3}
     volume: 1
+  - name: door_bash
+    source: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: bfe8cc643283fbb49b12b8c1c63d9ca9, type: 3}
+    volume: 1
   voicelines: []
   masterGroup: {fileID: 24300002, guid: 530217179dd05904bb816ded77df763e, type: 2}
   musicGroup: {fileID: -7609679559544151832, guid: 530217179dd05904bb816ded77df763e, type: 2}

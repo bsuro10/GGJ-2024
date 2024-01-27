@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
     public void BashOpenDoor()
     {
         print("Bashing door open");
-        //AudioManager.Instance.PlaySound("bash_open_door");
+        AudioManager.Instance.PlaySound("door_bash");
     }
 
     [ContextMenu("Close")]
