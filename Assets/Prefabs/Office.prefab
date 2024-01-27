@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 158358067709546485}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.64, y: 30.41, z: -87.27}
+  m_LocalPosition: {x: 40.64, y: 28, z: -87.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -495,22 +495,22 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.16787976
-      value: 0.71648407
-      inSlope: -0.13252865
-      outSlope: -0.13252865
+      time: 0
+      value: 0.32764435
+      inSlope: -0.25614834
+      outSlope: -0.25614834
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.22348939
+      outWeight: 0.35136777
     - serializedVersion: 3
-      time: 0.43052137
-      value: 0.5294752
-      inSlope: -1.777717
-      outSlope: -1.777717
+      time: 0.5138649
+      value: 0.14063549
+      inSlope: -0.5655921
+      outSlope: -0.5655921
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.41285914
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
@@ -2229,7 +2229,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delayInSeconds: 5
+  delayInSeconds: 8
 --- !u!1 &2937028389764551740
 GameObject:
   m_ObjectHideFlags: 0
@@ -10960,7 +10960,7 @@ GameObject:
   - component: {fileID: 7043318924995584612}
   - component: {fileID: 883349799059675328}
   - component: {fileID: 8531717167144050023}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12172,6 +12172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 4d75ce00493023a41818346676138eaa, type: 2}
   amount: 1
+  shelf: {fileID: 8874042290638358117}
 --- !u!4 &8153133198653051275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 009b9f48a477a2a4ab577cb2c1cf61fe, type: 3}
@@ -13029,6 +13030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 4d75ce00493023a41818346676138eaa, type: 2}
   amount: 1
+  shelf: {fileID: 0}
 --- !u!1001 &6795511373839112118
 PrefabInstance:
   m_ObjectHideFlags: 0
