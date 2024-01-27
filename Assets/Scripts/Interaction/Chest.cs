@@ -5,19 +5,15 @@ using UnityEngine;
 public class Chest : Interactable
 {
     [SerializeField] private Animator animator;
-    private bool isOpen = false;
 
     public override void Interact()
     {
-        if (isOpen) return;
-
-        isOpen = true;
+        gameObject.layer = LayerMask.NameToLayer("Default");
         animator.SetBool("isOpen", true);
     }
 
     public override string GetText()
     {
-        if(!isOpen) return "Press 'E' to open.";
-        return "";
+        return "Press 'E' to open.";
     }
 }
