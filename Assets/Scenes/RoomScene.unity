@@ -490,6 +490,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.data[14].name
+      value: ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.data[14].clips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828806569987127896, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
+      propertyPath: voicelines.Array.data[14].clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: aeef94f3ef1d0b147a0d0057123e0ed2, type: 3}
     - target: {fileID: 5776944633104775488, guid: de459821eab74c344ae78487fbb7a1c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

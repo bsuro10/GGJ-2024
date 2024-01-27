@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 8432823094345979682}
   - component: {fileID: 5941275576134138164}
   - component: {fileID: 8873837494666888742}
-  - component: {fileID: 348179595371278771}
+  - component: {fileID: 4305920216984098192}
   m_Layer: 3
   m_Name: Lever
   m_TagString: Untagged
@@ -2960,7 +2960,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.044060763, y: 0.044060778, z: 0.2974904}
   m_Center: {x: 0.000007637063, y: -2.0100366e-11, z: 0.1487452}
---- !u!114 &348179595371278771
+--- !u!114 &4305920216984098192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8514683717744518432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd3aaf36b7b9824b85eaf742a96cf17, type: 3}
+  m_Script: {fileID: 11500000, guid: fee5b9f4f0a1dfe40bbd9dff00fd952e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 41bd44304f0f4f74aa16abf5c9d2a9d4, type: 2}
@@ -3321,7 +3321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightPoint: {fileID: 5502839128438982952}
   delayedLightPoint: {fileID: 5255705573995368929}
-  delay: 5
+  delay: 9
 --- !u!65 &1934753562277664040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3356,6 +3356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7471472093777481070}
     m_Modifications:
+    - target: {fileID: 4822121688225733135, guid: 4461a5f4a8c763a498fae110e8c67787, type: 3}
+      propertyPath: firstChest
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5949491036334149887, guid: 4461a5f4a8c763a498fae110e8c67787, type: 3}
       propertyPath: m_Name
       value: Chest1
