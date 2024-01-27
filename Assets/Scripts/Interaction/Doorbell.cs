@@ -12,7 +12,7 @@ public class Doorbell : Interactable
         door.Invoke(nameof(door.OpenSlightly), 4.0f);
         AudioManager.Instance.PlaySound("doorbell");
         GetComponent<SphereCollider>().enabled = false;
-        doorknock.GetComponent<SphereCollider>().enabled = false;
+        doorknock.GetComponent<BoxCollider>().enabled = false;
     }
 
     public override string GetText()
