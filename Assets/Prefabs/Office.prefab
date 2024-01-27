@@ -3048,6 +3048,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   bookTableAudioSource: {fileID: 163822463127600396}
+  narratorVoice: {fileID: 0}
 --- !u!1 &3737778331893356856
 GameObject:
   m_ObjectHideFlags: 0

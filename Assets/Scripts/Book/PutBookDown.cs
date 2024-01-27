@@ -10,6 +10,7 @@ public class PutBookDown : MonoBehaviour
     [SerializeField] private Animator bookAnimator;
     [SerializeField] private UnityEvent afterCallback;
     [SerializeField] private AudioSource bookTableAudioSource;
+    [SerializeField] private NarratorVoiceStory narratorVoice;
 
     void Update()
     {
@@ -17,7 +18,9 @@ public class PutBookDown : MonoBehaviour
         {
             bookAnimator.SetTrigger("PlaceDown");
             AudioManager.Instance.PlaySound("close_book");
-            bookTableAudioSource.PlayDelayed(2.5f);
+            narratorVoice.Pause();
+            narratorVoice.PlayDelayed(bookTableAudioSource.clip, 2f);
+            narratorVoice.UnPause(4.5f);
             afterCallback.Invoke();
             this.enabled = false;
         }

@@ -32,11 +32,10 @@ public class Shelf : Interactable
             currentItem = bookItemRef;
             bookItemHidden.SetActive(true);
             InventoryManager.Instance.Remove(currentItem);
+            narratorVoiceStory.SwitchSources(bookAudioSource);
             bookAudioSource.Play();
             print("started closet voice story");
-            narratorVoiceStory.Stop();
             AudioManager.Instance.PlaySound("putdown");
-            bookAudioSource.timeSamples = narratorVoiceStory.source.timeSamples;
             StartCoroutine(InvokeDelayOnPickUpBook());
         } 
         else if (canPickBookBack && currentItem.name.Equals(bookItemRef.name))
@@ -45,12 +44,11 @@ public class Shelf : Interactable
             InventoryManager.Instance.Add(currentItem);
             currentItem = null;
             bookItemHidden.SetActive(false);
-            bookAudioSource.Stop();
+            narratorVoiceStory.SwitchSources(narratorVoiceStory.headSource);
             print("stopped closet voice story");
             AudioManager.Instance.PlayVoiceline("finally");
             AudioManager.Instance.PlaySound("pickup");
-            narratorVoiceStory.Play(3f);
-            narratorVoiceStory.source.timeSamples = bookAudioSource.timeSamples;
+            narratorVoiceStory.UnPause(3f);
             this.enabled = false;
         }
     }

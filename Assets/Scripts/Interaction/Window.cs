@@ -9,7 +9,6 @@ public class Window : Interactable
     [SerializeField] private GameObject cloneBookOnTable;
     [SerializeField] private Item bookItemRef;
     [SerializeField] private GameObject fireplace;
-
     private bool wasInteracted = false;
 
     public override void Interact()
@@ -25,8 +24,8 @@ public class Window : Interactable
             book.transform.position = bookThrowingTransform.position;
             book.GetComponent<Animator>().SetTrigger("Throw");
             cloneBookOnTable.SetActive(true);
+            cloneBookOnTable.GetComponentInChildren<AudioSource>().PlayDelayed(1f);
             fireplace.SetActive(true);
-            AudioManager.Instance.PlayVoiceline("do_that_again", 2f);
         }
     }
 
