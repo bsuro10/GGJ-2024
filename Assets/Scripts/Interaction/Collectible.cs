@@ -17,7 +17,7 @@ public class Collectible : Interactable
         return "Press 'E' to pick up " + transform.name;
     }
 
-    private void PickUp()
+    public virtual void PickUp()
     {
         Debug.Log("Picking up " + amount + " " + item.name);
         bool wasPickedUp = InventoryManager.Instance.Add(item, amount);

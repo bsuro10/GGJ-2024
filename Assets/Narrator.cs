@@ -4,21 +4,42 @@ using UnityEngine;
 
 public class Narrator : MonoBehaviour
 {
+    public static Narrator Instance;
+
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip[] storyLines;
     [SerializeField] private AudioClip[] remarks;
+    [SerializeField] private Transform targetTransform;
+    [SerializeField] public Transform player;
     [SerializeField] int currStory = 0;
     [SerializeField] int currRemark = 0;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+ 
+    }
+
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(targetTransform != null)
+        {
+            this.transform.position = targetTransform.position;
+        }
+
         if (!source.isPlaying) playStory();
     }
 
@@ -44,5 +65,10 @@ public class Narrator : MonoBehaviour
     {
         source.Stop();
         playRemark(delay);
+    }
+
+    public void setTarget(Transform targetTransform)
+    {
+        this.targetTransform = targetTransform;
     }
 }

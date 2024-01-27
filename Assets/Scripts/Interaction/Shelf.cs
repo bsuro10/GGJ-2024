@@ -6,11 +6,8 @@ public class Shelf : Interactable
 {
     [SerializeField] private Item bookItemRef;
     [SerializeField] private GameObject bookItemHidden;
-    private AudioSource bookAudioSource;
-    [SerializeField] private string voiceline;
     [SerializeField] private float delay;
     [SerializeField] private GameObject window;
-    [SerializeField] private NarratorVoiceStory narratorVoiceStory;
 
     private Item currentItem;
     private bool canPickBookBack = false;
@@ -19,7 +16,6 @@ public class Shelf : Interactable
     private void Start()
     {
         bookItemHidden.SetActive(false);
-        bookAudioSource = bookItemHidden.GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -32,11 +28,8 @@ public class Shelf : Interactable
             currentItem = bookItemRef;
             bookItemHidden.SetActive(true);
             InventoryManager.Instance.Remove(currentItem);
-            bookAudioSource.Play();
-            print("started closet voice story");
-            narratorVoiceStory.Stop();
             AudioManager.Instance.PlaySound("putdown");
-            bookAudioSource.timeSamples = narratorVoiceStory.source.timeSamples;
+            Narrator.Instance.setTarget(bookItemHidden.transform);
             StartCoroutine(InvokeDelayOnPickUpBook());
         } 
         else if (canPickBookBack && currentItem.name.Equals(bookItemRef.name))
@@ -45,12 +38,9 @@ public class Shelf : Interactable
             InventoryManager.Instance.Add(currentItem);
             currentItem = null;
             bookItemHidden.SetActive(false);
-            bookAudioSource.Stop();
-            print("stopped closet voice story");
-            AudioManager.Instance.PlayVoiceline("finally");
             AudioManager.Instance.PlaySound("pickup");
-            narratorVoiceStory.Play(3f);
-            narratorVoiceStory.source.timeSamples = bookAudioSource.timeSamples;
+            Narrator.Instance.setTarget(Narrator.Instance.player);
+            Narrator.Instance.pauseForDelay(1);
             this.enabled = false;
         }
     }
